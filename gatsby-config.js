@@ -41,28 +41,28 @@ module.exports = {
         // },
         sidebarCategories: {
           null: [
-            'intro/index',
+            'index',
             'intro/getting-started'
           ],
-          'Account Management': [
-            'account-management/setting-up-your-organization',
-            'account-management/join-an-organization'
+          'Account': [
+            'account/setting-up-your-organization',
+            'account/join-an-organization'
+          ],
+          'Email': [
+            'email/link-your-email-integration'
           ],
           'Boards': [
             'boards/client-boards',
             'boards/workstream-boards'
           ],
-          'Email': [
-            'email/link-your-email-integration'
-          ],
           'Documents': [
-            // 'email/link-your-email-integration',
+
           ],
           'Chat': [
-            // 'email/link-your-email-integration',
+
           ],
           'Checklists': [
-            // 'email/link-your-email-integration',
+
           ]
         },
         navConfig: {
