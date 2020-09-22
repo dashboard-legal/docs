@@ -1,6 +1,6 @@
 ---
-title: Documentation Home
+title: Documentation Home2
 description: Explore Dashboard Legal
 ---
 
-Welcome! 👋
+Welcome2! 👋

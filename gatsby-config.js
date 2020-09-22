@@ -10,7 +10,7 @@ const themeOptions = require('gatsby-theme-apollo-docs/theme-options');
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: `Your Site Name`,
+    title: `Dashboard Legal Docs`,
   },
   plugins: [
     {
@@ -41,64 +41,75 @@ module.exports = {
         // },
         sidebarCategories: {
           null: [
-            'example',
-            'somethingelse'
-            // 'getting-started',
-            // 'whats-new'
+            'intro/index',
+            'intro/getting-started'
           ],
-          Features: [
-            'intro/hi'
-            // 'features/errors',
-            // 'features/data-sources'
+          'Account Management': [
+            'account-management/setting-up-your-organization',
+            'account-management/join-an-organization'
+          ],
+          'Boards': [
+            'boards/client-boards',
+            'boards/workstream-boards'
+          ],
+          'Email': [
+            'email/link-your-email-integration'
+          ],
+          'Documents': [
+            // 'email/link-your-email-integration',
+          ],
+          'Chat': [
+            // 'email/link-your-email-integration',
+          ],
+          'Checklists': [
+            // 'email/link-your-email-integration',
           ]
         },
         navConfig: {
-			'Apollo Basics': {
-				url: 'https://www.apollographql.com/docs',
-				description:
-				'Learn about each part of the Apollo platform and how they all work together.',
-				omitLandingPage: true
-			},
-			'Apollo Server': {
-				url: 'https://www.apollographql.com/docs/apollo-server',
-				description:
-				'Configure a production-ready GraphQL server to fetch and combine data from multiple sources.'
-			},
-			'Apollo Client (React)': {
-				url: 'https://www.apollographql.com/docs/react',
-				description:
-				"Manage the entirety of your React app's state and seamlessly execute GraphQL operations."
-			},
-			'Apollo Studio': {
-				url: 'https://www.apollographql.com/docs/graph-manager',
-				description:
-				"Build your graph with your team, evolve it safely, and keep it running smoothly."
-			},
-			'Apollo Client (iOS)': {
-				url: 'https://www.apollographql.com/docs/ios',
-				description:
-				"Manage the entirety of your iOS app's state and seamlessly execute GraphQL operations."
-			},
-			'Apollo Client (Android)': {
-				url: 'https://www.apollographql.com/docs/android',
-				description:
-				"Manage the entirety of your Android app's state and seamlessly execute GraphQL operations.",
-				omitLandingPage: true
-			}
+			// 'Apollo Basics': {
+			// 	url: 'https://www.apollographql.com/docs',
+			// 	description:
+			// 	'Learn about each part of the Apollo platform and how they all work together.',
+			// 	omitLandingPage: true
+			// },
+			// 'Apollo Server': {
+			// 	url: 'https://www.apollographql.com/docs/apollo-server',
+			// 	description:
+			// 	'Configure a production-ready GraphQL server to fetch and combine data from multiple sources.'
+			// },
+			// 'Apollo Client (React)': {
+			// 	url: 'https://www.apollographql.com/docs/react',
+			// 	description:
+			// 	"Manage the entirety of your React app's state and seamlessly execute GraphQL operations."
+			// },
+			// 'Apollo Studio': {
+			// 	url: 'https://www.apollographql.com/docs/graph-manager',
+			// 	description:
+			// 	"Build your graph with your team, evolve it safely, and keep it running smoothly."
+			// },
+			// 'Apollo Client (iOS)': {
+			// 	url: 'https://www.apollographql.com/docs/ios',
+			// 	description:
+			// 	"Manage the entirety of your iOS app's state and seamlessly execute GraphQL operations."
+			// },
+			// 'Apollo Client (Android)': {
+			// 	url: 'https://www.apollographql.com/docs/android',
+			// 	description:
+			// 	"Manage the entirety of your Android app's state and seamlessly execute GraphQL operations.",
+			// 	omitLandingPage: true
+			// }
 		},
         footerNavConfig: {
+			Home: {
+				href: 'https://dashboardlegal.com/'
+			},
 			Blog: {
-				href: 'https://blog.apollographql.com/',
+				href: 'https://dashboardlegal.com/insights/',
 				target: '_blank',
 				rel: 'noopener noreferrer'
 			},
-			Contribute: {
-				href: 'https://www.apollographql.com/docs/community/'
-			},
-			'GraphQL Summit': {
-				href: 'https://summit.graphql.com/',
-				target: '_blank',
-				rel: 'noopener noreferrer'
+			'Log In': {
+				href: 'https://app.dashboardlegal.com/'
 			}
         }
       }
