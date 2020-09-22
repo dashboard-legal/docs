@@ -20,6 +20,10 @@ No more losing important client emails & documents, switching between Outlook an
 - **✔️ Checklists:** Keep track of deliverables and due dates, even share them with customers if you wish.
 
 
+## Demo Video
+
+<iframe width="100%" height="464" src="https://www.youtube.com/embed/6moFtatIt-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Explore the docs
 
 After you [get started](./intro/getting-started/), check out the full Dashboard Legal docs, organized into the following sections on the left:

@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const themeOptions = require('gatsby-theme-apollo-docs/theme-options');
-
 // gatsby-config.js
 module.exports = {
   pathPrefix: '/',
@@ -17,20 +15,20 @@ module.exports = {
       resolve: 'gatsby-theme-apollo-docs',
       options: {
         root: __dirname,
-        siteName: 'Dashboard Legal Docs 1',
-        pageTitle: 'Dashboard Legal Docs 2',
-		menuTitle: 'Dashboard Legal Docs 3',
-        subtitle: 'Dashboard Legal Docs 4',
+        siteName: 'Dashboard Legal Docs',
+        pageTitle: 'Dashboard Legal Docs',
+		menuTitle: 'Dashboard Legal Docs',
+        subtitle: 'Dashboard Legal Web',
         description: 'A guide to using Dashboard Legal',
         // githubRepo: 'dashboard-legal/docs',
         // gaTrackingId: 'UA-74643563-13',
 		// algoliaApiKey: '768e823959d35bbd51e4b2439be13fb7',
 		// algoliaIndexName: 'apollodata',
-		baseUrl: 'https://www.apollographql.com',
+		//baseUrl: 'https://docs.dashboardlegal.com',
 		// twitterHandle: 'apollographql',
 		// spectrumHandle: 'apollo',
 		// youtubeUrl: 'https://www.youtube.com/channel/UC0pEW_GOrMJ23l8QcrGdKSw',
-		logoLink: 'https://www.apollographql.com/docs/',
+		//logoLink: 'https://docs.dashboardlegal.com',
 		// baseDir: 'docs',
 		contentDir: 'content',
 
@@ -44,72 +42,48 @@ module.exports = {
             'index',
             'intro/getting-started'
           ],
-          'Account': [
-            'account/setting-up-your-organization',
-            'account/join-an-organization'
-          ],
+          // 'Account': [
+          //   'account/setting-up-your-organization',
+          //   'account/join-an-organization'
+          // ],
           'Email': [
-            'email/link-your-email-integration'
+            'email/intro',
+            'email/link-your-email',
+            'email/get-admin-approval'
           ],
-          'Boards': [
-            'boards/client-boards',
-            'boards/workstream-boards'
-          ],
-          'Documents': [
+          // 'Boards': [
+          //   'boards/client-boards',
+          //   'boards/workstream-boards'
+          // ],
+          // 'Documents': [
 
-          ],
-          'Chat': [
+          // ],
+          // 'Chat': [
 
-          ],
-          'Checklists': [
+          // ],
+          // 'Checklists': [
 
-          ]
+          // ]
         },
         navConfig: {
-			// 'Apollo Basics': {
-			// 	url: 'https://www.apollographql.com/docs',
-			// 	description:
-			// 	'Learn about each part of the Apollo platform and how they all work together.',
-			// 	omitLandingPage: true
-			// },
-			// 'Apollo Server': {
-			// 	url: 'https://www.apollographql.com/docs/apollo-server',
-			// 	description:
-			// 	'Configure a production-ready GraphQL server to fetch and combine data from multiple sources.'
-			// },
-			// 'Apollo Client (React)': {
-			// 	url: 'https://www.apollographql.com/docs/react',
-			// 	description:
-			// 	"Manage the entirety of your React app's state and seamlessly execute GraphQL operations."
-			// },
-			// 'Apollo Studio': {
-			// 	url: 'https://www.apollographql.com/docs/graph-manager',
-			// 	description:
-			// 	"Build your graph with your team, evolve it safely, and keep it running smoothly."
-			// },
-			// 'Apollo Client (iOS)': {
-			// 	url: 'https://www.apollographql.com/docs/ios',
-			// 	description:
-			// 	"Manage the entirety of your iOS app's state and seamlessly execute GraphQL operations."
-			// },
-			// 'Apollo Client (Android)': {
-			// 	url: 'https://www.apollographql.com/docs/android',
-			// 	description:
-			// 	"Manage the entirety of your Android app's state and seamlessly execute GraphQL operations.",
-			// 	omitLandingPage: true
-			// }
+			'Dashboard Legal Web': {
+				url: 'https://docs.dashboardlegal.com',
+				description: 'Set up your firm with Dashboard Legal in minutes'
+				//omitLandingPage: true
+			}
 		},
         footerNavConfig: {
 			Home: {
-				href: 'https://dashboardlegal.com/'
+				href: 'https://dashboardlegal.com/',
+				target: '_blank'
 			},
 			Blog: {
 				href: 'https://dashboardlegal.com/insights/',
-				target: '_blank',
-				rel: 'noopener noreferrer'
+				target: '_blank'
 			},
 			'Log In': {
-				href: 'https://app.dashboardlegal.com/'
+				href: 'https://app.dashboardlegal.com/',
+				target: '_blank'
 			}
         }
       }

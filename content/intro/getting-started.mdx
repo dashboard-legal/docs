@@ -1,6 +1,79 @@
 ---
 title: Getting Started
-description: Let's get you set up with Dashboard Legal
+description: Up and running in 5 minutes
 ---
 
-Apollo Server is the best way to quickly build a production-ready, self-documenting API for GraphQL clients, using data from any source.
+import {
+  ExpansionPanel,
+} from 'gatsby-theme-apollo-docs/src/components/expansion-panel';
+
+
+This tutorial helps you:
+
+* Create an organization on Dashboard Legal
+* Invite some teammates to join your organization
+* Set up your email integration
+* Set up your first client board
+* Set up your first workstream board
+
+
+## Step 1: Create a new organization
+
+> This tutorial walks you through setting up a new Dashboard Legal organization and inviting your team.
+> If your teammate is already on the platform, they can invite you and you can [join their organization](../account/join-an-organization/)
+
+1. Go to the [registration page](https://app.dashboardlegal.com/accounts/signup/) to create your account. All that is needed is your email address and a secure password.
+2. Since you are registering a new organization, press the "Yes, set up a new organization" button.
+3. You will be asked for your organization name and a domain name (like _dashboardlegal.com_). This domain name will be used to enable your teammates to sign up without you inviting them (if you choose to enable this setting)
+
+
+## Step 2: Invite some teammates
+
+1. Go to the [organization settings](https://app.dashboardlegal.com/x/settings/users/). Here is where you will see your current teammates, as well as be able to invite new ones.
+
+<ExpansionPanel title="Dashboad Legal User Types">
+   Dashboard Legal has 3 user types. If you are creating an organization following this guide, you will be set up as the **Owner** of your organization.
+   - **Owner**: Manages users in the organization and all organization settings.
+   - **Admin**: Manages users in the organization and some non-sensitive organization settings.
+   - **Member**: Does not manage any of the settings of the organization.
+</ExpansionPanel>
+
+2. Press "Invite User" and enter an email address of a colleague.
+3. This teammate can now sign up at the [registration page](https://app.dashboardlegal.com/accounts/signup/), and Dashboard Legal will know to put them in your organization.
+
+
+## Step 3: Set up your email
+
+1. Go to your [email settings](https://app.dashboardlegal.com/x/account/email/).
+2. Select the email provider of your choice and log in with your credentials for that email provider, then accept the permissions that Dashboard Legal requires to manage your email.
+
+   <ExpansionPanel title="Email Integration Security">
+   	- Dashboard Legal treats the security of your data as it's highest priority.
+   	- We do not store your emails/attachments/events/contacts on our servers.
+   	- We explicitly ask for your permission to hit Outlook/Gmail APIs on your behalf.
+   	- You can opt out of our email integration at any time.
+   </ExpansionPanel>
+
+3. Upon successful authentication, you will be able to manage your email in your [mail page](https://app.dashboardlegal.com/x/mail/).
+
+> Some Microsoft/Google organizations will require admin approval to use Dashboard Legal.
+> If you get a message that says you need admin approval, please follow [this guide](../email/get-admin-approval/) to learn how to request it.
+
+
+## Step 4: Create a client board
+
+1. Go to your [main boards view](https://app.dashboardlegal.com/x/boards/all/). Here you will see all of *your* client boards, as well as any client boards that your teammates set up. For any client boards you are not a part of, you can request the board owner to get access.
+2. Press "+ New Board" to [create a new client board](https://app.dashboardlegal.com/x/boards/all/new/). You will enter the client name, as well as as optionally add teammates to that board and configure the client's domain name.
+> If you configure the client's domain name, you will be able to see emails to and from contacts at that client instantly.
+3. Press "Create" to create that client board. You will be greeted with a welcome modal describing this client board.
+4. Your new client board will be created with a primary workstream, which all members of this client board are a part of. They can now share documents, talk over chat, and collaborate on checklist items.
+5. If you would like to collaborate with teammates on this client, you may press "Configure" on the client board and add some collaborators. They will inherit the client email rules, but will see the filtered emails in *their* inbox and not your own.
+
+## Step 5: Create a workstream board
+
+> All client boards get created with a primary workstream board. However, you can set up additional workstream boards for other matters, and control which of your client teammates has access to this workstream board.
+
+1. Go to your client board and press "+ New Workstream"
+2. Set the name for the workstream, and optionally invite any of your client teammates to this board.
+3. This workstream board has it's own set of documents, chats, and checklist items.
+
