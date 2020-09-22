@@ -1,6 +1,42 @@
 ---
-title: Link your Email Integration
+title: Link your email integration
 description: 30 seconds to get up and running
 ---
 
-content
+import {
+  ExpansionPanel,
+} from 'gatsby-theme-apollo-docs/src/components/expansion-panel';
+
+> Dashboard Legal is designed to integrate with multiple possible email providers.
+> At the moment, the only one that is availble if Microsoft Outlook, although Gmail is coming soon!
+
+
+## Set up your email integration
+
+1. Go to your [email settings](https://app.dashboardlegal.com/x/account/email/).
+2. Select the email provider of your choice and log in with your credentials for that email provider, then accept the permissions that Dashboard Legal requires to manage your email.
+
+   <ExpansionPanel title="Email Integration Security">
+   	- Dashboard Legal treats the security of your data as it's highest priority.
+   	- We do not store your emails/attachments/events/contacts on our servers.
+   	- We explicitly ask for your permission to hit Outlook/Gmail APIs on your behalf.
+   	- You can opt out of our email integration at any time.
+   </ExpansionPanel>
+
+3. Upon successful authentication, you will be able to manage your email in your [main inbox](https://app.dashboardlegal.com/x/mail/).
+
+
+## Admin approval
+
+Some Microsoft/Google organizations will require admin approval to use Dashboard Legal.
+
+If you get a message that says you need admin approval, please follow [this guide](../email/get-admin-approval/) to learn how to request it.
+
+
+## Disconnect & Refresh
+
+If you would like to link a different email account, you may press "Disconnect" and link a different account.
+
+If you are for some reason not able to see any of your emails, press the "Refresh Permissions" button to re-connect your email integration.
+
+

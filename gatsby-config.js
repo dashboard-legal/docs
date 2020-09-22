@@ -67,7 +67,7 @@ module.exports = {
         },
         navConfig: {
 			'Dashboard Legal Web': {
-				url: 'https://docs.dashboardlegal.com',
+				url: '/',
 				description: 'Set up your firm with Dashboard Legal in minutes'
 				//omitLandingPage: true
 			}
