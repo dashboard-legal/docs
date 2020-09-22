@@ -17,20 +17,20 @@ module.exports = {
         root: __dirname,
         siteName: 'Dashboard Legal Docs',
         pageTitle: 'Dashboard Legal Docs',
-		menuTitle: 'Dashboard Legal Docs',
+		    menuTitle: 'Dashboard Legal Docs',
         subtitle: 'Dashboard Legal Web',
         description: 'A guide to using Dashboard Legal',
         // githubRepo: 'dashboard-legal/docs',
         // gaTrackingId: 'UA-74643563-13',
-		// algoliaApiKey: '768e823959d35bbd51e4b2439be13fb7',
-		// algoliaIndexName: 'apollodata',
-		//baseUrl: 'https://docs.dashboardlegal.com',
-		// twitterHandle: 'apollographql',
-		// spectrumHandle: 'apollo',
-		// youtubeUrl: 'https://www.youtube.com/channel/UC0pEW_GOrMJ23l8QcrGdKSw',
-		//logoLink: 'https://docs.dashboardlegal.com',
-		// baseDir: 'docs',
-		contentDir: 'content',
+    		// algoliaApiKey: '768e823959d35bbd51e4b2439be13fb7',
+    		// algoliaIndexName: 'apollodata',
+    		//baseUrl: 'https://docs.dashboardlegal.com',
+    		// twitterHandle: 'apollographql',
+    		// spectrumHandle: 'apollo',
+    		// youtubeUrl: 'https://www.youtube.com/channel/UC0pEW_GOrMJ23l8QcrGdKSw',
+    		//logoLink: 'https://docs.dashboardlegal.com',
+    		// baseDir: 'docs',
+		    contentDir: 'content',
 
         spectrumHandle: null,
         // defaultVersion: '1',
@@ -66,26 +66,26 @@ module.exports = {
           // ]
         },
         navConfig: {
-			'Dashboard Legal Web': {
-				url: '/',
-				description: 'Set up your firm with Dashboard Legal in minutes'
-				//omitLandingPage: true
-			}
-		},
-        footerNavConfig: {
-			Home: {
-				href: 'https://dashboardlegal.com/',
-				target: '_blank'
-			},
-			Blog: {
-				href: 'https://dashboardlegal.com/insights/',
-				target: '_blank'
-			},
-			'Log In': {
-				href: 'https://app.dashboardlegal.com/',
-				target: '_blank'
-			}
-        }
+  			'Dashboard Legal Web': {
+  				url: '/',
+  				description: 'Set up your firm with Dashboard Legal in minutes'
+  				//omitLandingPage: true
+  			}
+  		},
+      footerNavConfig: {
+  			Home: {
+  				href: 'https://dashboardlegal.com/',
+  				target: '_blank'
+  			},
+  			Blog: {
+  				href: 'https://dashboardlegal.com/insights/',
+  				target: '_blank'
+  			},
+  			'Log In': {
+  				href: 'https://app.dashboardlegal.com/',
+  				target: '_blank'
+  			}
+      }
       }
     }
   ]
