@@ -1,17 +1,13 @@
 {
   "name": "dashboard-legal-docs",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A Gatsby site for documentation for Dash Legal",
   "version": "0.1.0",
-  "license": "0BSD",
   "scripts": {
+    "prestart": "gatsby clean",
+    "start": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.24.61",
@@ -19,9 +15,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
-  "devDependencies": {
-    "prettier": "2.1.1"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/dashboard-legal/docs"
