@@ -21,7 +21,7 @@ module.exports = {
         subtitle: 'Dashboard Legal Web',
         description: 'A guide to using Dashboard Legal',
         // githubRepo: 'dashboard-legal/docs',
-        // gaTrackingId: 'UA-74643563-13',
+        gaTrackingId: 'UA-176728190-4',
     		// algoliaApiKey: '768e823959d35bbd51e4b2439be13fb7',
     		// algoliaIndexName: 'apollodata',
     		//baseUrl: 'https://docs.dashboardlegal.com',
