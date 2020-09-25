@@ -49,6 +49,7 @@ module.exports = {
           'Email': [
             'email/intro',
             'email/link-your-email',
+            'email/email-security',
             'email/get-admin-approval'
           ],
           // 'Boards': [

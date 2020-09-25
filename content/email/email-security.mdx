@@ -1,0 +1,51 @@
+---
+title: Email security
+description: Security of your business documents is our highest priority
+---
+
+**Dashboard Legal treats the security of your data as it's highest priority.**
+
+We recognize that you have sensitive information in your email inbox, which is why security is built into our architecture to protect it.
+
+
+## Data storage
+
+Dashboard Legal does not store ANY your emails/attachments/events/contacts on our servers.
+
+Instead, we use authorized requests to Microsoft/Google to fetch data using an encrypted connection and display it in our UI.
+
+When you link your email account, Dashboard Legal can fetch your emails, but not emails of anybody else in your organization.
+
+Any additional data that you create in Dashboard Legal (clients, workstreams, chats, checklists) are stored in our secure, encrypted database, protected by access controls that the administrator of your account controls.
+
+
+## Explicit permissions
+
+When an organization admin grants consent for Dashboard Legal to access APIs on your behalf, the data types that we are receiving access to are explicitly displayed.
+
+Dashboard Legal only has permission to query the information that it is granted. Any additional APIs (for future functionality) will need to be consented to by an administrator in your organization.
+
+You may disconnect your email integration (or link a new one) in your [email settings](https://app.dashboardlegal.com/x/account/email/) any time you wish.
+
+
+## Trusted Partnerships
+
+### Microsoft
+
+Dashboard Legal is a verified Microsoft Publisher. You can learn more about Microsoft Partner Network [here](https://docs.microsoft.com/en-us/azure/active-directory/develop/publisher-verification-overview). 
+
+
+## Handling of attachments
+
+Dashboard legal does not automatically import the attachments you receive or send in your emails.
+
+If you choose to, you may add an attachment received in an email to a client workstream. That document is then available to teammates that are a part of that workstream. Access to a workstream is managed by the workstream administrator, and can be granted/revoked any time.
+
+Documents that are stored using Dashboard Legal's document feature are hosted in a protected AWS S3 bucket. These documents are private, and are made available to Dashboard Legal's users based on our role-based access controls.
+
+
+## Admin management
+
+Although some Microsoft/Google organizations enable their users to use third-party apps without any additional verification, many will restrict access to the applications that their users have access to. To learn how to request admin access, or grant admin access, please follow [this guide](../email/get-admin-approval/).
+
+Organization admins can clearly see and consent to the permissions required for users to access Dashboard Legal. Access can be granted to one individual, or the whole organization. It can also be revoked at any time from the Microsoft/Google administrator dashboard.
