@@ -12,5 +12,5 @@ It uses the [Apollo docs theme](https://github.com/apollographql/gatsby-theme-ap
 
 # Deployment
 - `gatsby build` to build the prod bundle
-- `gabsty serve` will serve it locally
-- Upon a push to master, [netlify](https://www.netlify.com) will deploy the latest bundle to [https://docs.dashboardlegal.com](https://docs.dashboardlegal.com)
+- `gabsty serve` will serve the production bundle locally
+- Upon a push to master, [netlify](https://www.netlify.com) will build the prod bundle and deploy it to [https://docs.dashboardlegal.com](https://docs.dashboardlegal.com)
