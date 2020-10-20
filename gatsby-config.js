@@ -64,7 +64,11 @@ module.exports = {
           // ],
           // 'Checklists': [
 
-          // ]
+          // ],
+          'Administration': [
+            'administration/managing-users',
+            'administration/security-settings',
+          ],
         },
         navConfig: {
   			'Dashboard Legal Web': {
