@@ -1,0 +1,33 @@
+---
+title: iManage Integration
+description: 30 seconds to get up and running
+---
+
+import {
+  ExpansionPanel,
+} from 'gatsby-theme-apollo-docs/src/components/expansion-panel';
+
+> Dashboard Legal is designed to integrate with multiple possible document providers.
+> At the moment, the only one that is available if iManage Cloud, although NetDocs + iManage on-prem are coming soon!
+
+
+## Set up your DMS integration (as an org admin)
+
+1. Go to your [organization integration settings](https://app.dashboardlegal.com/x/settings/integrations/).
+2. Select "iManage Cloud", and you're good to go! It's really that simple!
+3. To confirm that everything is set up properly, you can test the integration by pressing "Login to iManage"
+
+
+## What happens next
+
+The iManage cloud integration will enable your organization users to log into iManage via their [account integrations settings](https://app.dashboardlegal.com/x/account/integrations/) page. The authentication is Oauth2-based, and after being redirected to iManage to enter their credentials, they will be able to view the same documents in Dashboard Legal as they would in the cloud iManage UI.
+
+If a user has not linked their iManage account, they will not be able to see any documents in Dashboard Legal, but a message asking them to log in. The user should only have to log in once, but if they ever want to refresh their API token, or disconnect their iManage account, they may do so from their account integration page.
+
+
+## Things to note about administering the iManage integration
+- iManage matters are mapped to Dashboard Legal Workstream boards. In the settings for the board, board admins will find a dropdown to select the iManage matter for that workstream.
+- Once linked, that matter's documents will show up in the workstream board. An iManage matter can only be linked to one Dashboard Legal Workstream
+- You can only set up one DMS integration at a time. If you go back to the [organization integration settings](https://app.dashboardlegal.com/x/settings/integrations/) and select "Dashboard Legal", the workstream documents will source from Dashboard Legal's DMS. Although it's possible to toggle between various DMS providers, we'd recommend not doing that.
+
+

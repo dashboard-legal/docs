@@ -56,9 +56,11 @@ module.exports = {
           //   'boards/client-boards',
           //   'boards/workstream-boards'
           // ],
-          // 'Documents': [
-
-          // ],
+          'Documents': [
+            'documents/intro',
+            'documents/how-to',
+            'documents/imanage',
+          ],
           // 'Chat': [
 
           // ],
