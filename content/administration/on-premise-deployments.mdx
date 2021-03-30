@@ -26,8 +26,14 @@ If you are an existing Reynen Court consortium members, please look for the Dash
 
 ## Deployment Guide
 
-### rcspec File
+Once you have signed up for Reynen Court and found Dashboard Legal in the solutions store, please use the following guide for deploying the Dashboard Legal application.
+
+### RCspec File
 The following application configuration options are required/available.
+
+Please note that the azure key/secret are required to use the [o365 Outlook Integration](../email/intro/#currently-supported-integrations).
+
+The SMTP credentials are used only for certain application-initiated emails like password reset. The user emails will be managed by the selected email integration provider. It is recommended to include SMTP credentials for the environment if your users are logging in with username/password.
 
 | Variable      | Required | Description |
 | ------------- | -------- | ------------|
@@ -43,9 +49,6 @@ The following application configuration options are required/available.
 | smtp_password | No | SMTP Password |
 | smtp_use_tls | No | Use TLS over SSL for SMTP connection |
 
-Please note that the azure key/secret are required to use the [o365 Outlook Integration](../email/intro/#currently-supported-integrations).
-
-The SMTP credentials are used only for certain application-initiated emails like password reset. The user emails will be managed by the selected email integration provider. It is recommended to include SMTP credentials for the environment if your users are logging in with username/password.
 
 ### Creating the Organization
 The IT admin at the law firm should sign up at "/accounts/signup/" on the host that is created on the RC platform. After signing up, they can then manage the organization [security settings](./security-settings) and [invite other users](./managing-users).
@@ -77,6 +80,7 @@ Please keep in mind that the Minio container stores certain images used in the a
 |                            | Memory | Web 4Gi, Hasura 4Gi         |
 |                            | Disc   | Postgres 64Gi, Minio 16Gi\* |
 
-\* If using the DBL DMS, add estimated size of documents stored
+
+**\* If using the DBL DMS, add estimated size of documents stored**
 
 
