@@ -23,8 +23,6 @@ If you are new to Reynen Court, please [book a demo](https://reynencourt.com/con
 
 If you are an existing Reynen Court consortium members, please look for the Dashboard Legal application in the [solutions store](https://docs.rcplatform.io/docs/reynen-court-store).
 
-## Architecture Diagram
-
 
 ## Deployment Guide
 
@@ -49,7 +47,7 @@ Please note that the azure key/secret are required to use the [o365 Outlook Inte
 
 The SMTP credentials are used only for certain application-initiated emails like password reset. The user emails will be managed by the selected email integration provider. It is recommended to include SMTP credentials for the environment if your users are logging in with username/password.
 
-### Creating the oOrganization
+### Creating the Organization
 The IT admin at the law firm should sign up at "/accounts/signup/" on the host that is created on the RC platform. After signing up, they can then manage the organization [security settings](./security-settings) and [invite other users](./managing-users).
 
 ### Configuring Integrations
@@ -66,30 +64,19 @@ When deploying the Dashboard Legal application on your own infrastructure, pleas
 
 Please keep in mind that the Minio container stores certain images used in the application (like user avatars), and documents if you are using the DBL in-house DMS. There will always be a need for some storage space (for the avatars), but if you are using the DBL DMS you will need to size it based on your intended document use.
 
-### Small (<20 users)
 
-vCPU: 1
-Memory: 1Gi
-Disk
-- MySQL: 2Gi
-- Redis: 1Gi
+| Deployment    | Resource | Requirement |
+| ----------    | -------- | ----------- |
+| Small (less than 20 users) | vCPU   | 1                           |
+|                            | Memory | Web 1Gi, Hasura 1Gi         |
+|                            | Disc   | Postgres 8Gi, Minio 4Gi\*   |
+| Medium (20 - 50 users)     | vCPU   | 2                           |
+|                            | Memory | Web 2Gi, Hasura 2Gi         |
+|                            | Disc   | Postgres 16Gi, Minio 8Gi\*  |
+| Large (50+ users)          | vCPU   | 4                           |
+|                            | Memory | Web 4Gi, Hasura 4Gi         |
+|                            | Disc   | Postgres 64Gi, Minio 16Gi\* |
 
-### Medium (20 - 50 users)
-
-vCPU: 2
-Memory: 2Gi
-Disk
-- MySQL: 5Gi
-- Redis: 3Gi
-
-### Large (50+ users)
-
-vCPU: 2
-Memory: 2Gi
-Disk
-- MySQL: 12Gi
-- Redis: 5Gi
-
-
+\* If using the DBL DMS, add estimated size of documents stored
 
 
