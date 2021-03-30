@@ -70,14 +70,19 @@ module.exports = {
           'Administration': [
             'administration/managing-users',
             'administration/security-settings',
+            'administration/on-premise-deployments',
           ],
         },
         navConfig: {
-  			'Dashboard Legal Web': {
-  				url: '/',
-  				description: 'Set up your firm with Dashboard Legal in minutes'
-  				//omitLandingPage: true
-  			}
+    			'Dashboard Legal Web': {
+    				url: '/',
+    				description: 'Set up your firm with Dashboard Legal in minutes'
+    				//omitLandingPage: true
+    			},
+          // 'Dashboard Legal On-Premise': {
+          //   url: '/on-prem/',
+          //   description: "Deploy Dashboard Legal on your own infrastructure using the Reynen Court Platform"
+          // },
   		},
       footerNavConfig: {
   			Home: {
