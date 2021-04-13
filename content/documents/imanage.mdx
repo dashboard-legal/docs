@@ -8,7 +8,7 @@ import {
 } from 'gatsby-theme-apollo-docs/src/components/expansion-panel';
 
 > Dashboard Legal is designed to integrate with multiple possible document providers.
-> At the moment, the only one that is available if iManage Cloud, although NetDocs + iManage on-prem are coming soon!
+> At the moment, the only ones that are available are iManage Cloud + iManage on-prem, although NetDocs support is coming soon.
 
 
 ## Admin setup of iManage integration
@@ -16,7 +16,7 @@ import {
 1. Log into your iManage control center, and [add](https://docs.imanage.com/cc-help/10.3.3/en/Adding_an_application.html) the "Dashboard Legal" application.
 2. Enable it for all of your users, and please set "Allow Refresh Token" to "Yes"
 3. Go to your Dashboard Legal [organization integration settings](https://app.dashboardlegal.com/x/settings/integrations/).
-4. Select "iManage Cloud" and press "Save". You are good to go!
+4. Select "iManage" and press "Save". You are good to go!
 5. If you have your own iManage work server which is hosted somewhere other than cloudimanage.com, please modify that field (do not include https:// or a trailing backslash) and press "Save". 
 6. To confirm that everything is set up properly, you can test the integration authentication by pressing the big purple button on the screen.
 
@@ -24,7 +24,7 @@ import {
 
 ## What happens next
 
-The iManage cloud integration will enable your organization users to log into iManage via their [account integrations settings](https://app.dashboardlegal.com/x/account/integrations/) page. The authentication is Oauth2-based, and after being redirected to iManage to enter their credentials, they will be able to view the same documents in Dashboard Legal as they would in the cloud iManage UI.
+The iManage integration will enable your organization users to log into iManage via their [account integrations settings](https://app.dashboardlegal.com/x/account/integrations/) page. The authentication is Oauth2-based, and after being redirected to iManage to enter their credentials, they will be able to view the same documents in Dashboard Legal as they would in the cloud iManage UI.
 
 If a user has not linked their iManage account, they will not be able to see any documents in Dashboard Legal, but a message asking them to log in. The user should only have to log in once, but if they ever want to refresh their API token, or disconnect their iManage account, they may do so from their account integration page.
 
