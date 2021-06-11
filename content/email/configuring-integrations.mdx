@@ -28,11 +28,12 @@ This integration is for on-premise Exchange server 2016/2019. It requires a serv
 
 ### Configuration
 The administrator of the organization performs the following:
-- Configures [SAML SSO](../administration/security-settings/#single-sign-on)
-- Chooses the Exchange Service Account option in [Integration Settings](https://app.dashboardlegal.com/x/settings/integrations/)
-- Configures the work server that hosts the Exchange server
-- Saves the credentials for the service account
-- Tests the integration on their own account in their [email settings](https://app.dashboardlegal.com/x/account/email/)
+- Configure [SAML SSO](../administration/security-settings/#single-sign-on) for the organization
+- Create a service account in your Exchange Server, which has permissions to impersonate mailboxes of other users
+- Choose the Exchange Service Account option in [Integration Settings](https://app.dashboardlegal.com/x/settings/integrations/)
+- Configure the domain to the work server that hosts the Exchange server
+- Save the credentials for the service account
+- Test the integration on your own account in [email settings](https://app.dashboardlegal.com/x/account/email/)
 
 ![exchange-service-account](./img/exchange-service-account.png)
 
