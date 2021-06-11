@@ -50,7 +50,8 @@ module.exports = {
             'email/intro',
             'email/link-your-email',
             'email/email-security',
-            'email/get-admin-approval'
+            'email/get-admin-approval',
+            'email/configuring-integrations'
           ],
           // 'Boards': [
           //   'boards/client-boards',
