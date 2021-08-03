@@ -1,0 +1,57 @@
+---
+title: Data Residency & Security
+description: Your sensitive data is hosted securely in systems you trust
+---
+
+Information security is of upmost importance to Dashboard Legal.
+
+We take extra precaution to only store your data if we absolutely need to, and when we choose to do that we ensure that it is accessed securely & safely. 
+
+
+## Pillars of Dashboard Legal Data Residency & Retrieval
+
+### Not storing sensitive information (like Emails & Documents)
+You have existing systems for your emails + documents, so there is no need for us to store this information. We surface this data in our organized interface to authenticated users if they have access to view this information.
+
+We have tight two-way integrations with your Email + DMS providers to ensure that those systems maintain the single source of truth of your data.
+
+
+### Access on behalf of users
+When a user links an email or DMS integration, they authenticate with that system and Dashboard Legal surfaces information from those systems in our UI.
+
+This means that a user will only ever be able to see their own emails and documents that they already have access to in those systems.
+
+In the event of a service account integration that has broader permissions than just 1 user account, this integration is paired with our SSO authentication to ensure proper data access.
+
+For the various options of integration, please see the [Email Integration](../email/configuring-integrations) and [DMS Integration](../documents/imanage) documentation.
+
+### User access at various organizational levels
+Not all data is stored in external Email & DMS systems. For example, our Chat & Checklist are proprietary Dashboard Legal features that create/utilize data securely stored in the deployment environment (either cloud or on-prem).
+
+This data is accessible based on our built-in user access controls. Simply put, you can only see the chat & checklist data for a client or workstream if you are given permission by that client/workstream administrator.
+
+
+## Data Residency
+We have a couple of deployment options, use the following tables to determine where data lives and who has access.
+
+By "DBL Staff Access", this does not mean that all DBL staff has access, but that certain authorized staff members could potentially access if there was a need, like debugging an issue.
+
+### DBL Cloud
+| Data | Storage System | User Access | DBL Staff Access |
+| ----------    | - | -------- | ----------- |
+| Emails | Outlook/Exchange| Inbox owner only | ❌ |
+| Documents (with DMS) | iManage/NetDocs | If has permission in DMS | ❌ |
+| Documents (without DMS) | DBL (AWS S3) | If granted access to board by admin | ✅ |
+| Boards | DBL (AWS RDS) | If granted access to board by admin | ✅ |
+| Chat | DBL (AWS RDS) | If granted access to board by admin | ✅ |
+| Checklist | DBL (AWS RDS) | If granted access to board by admin | ✅ |
+
+### DBL On-premise via [Reynen Court](./on-premise-deployments)
+| Data | Storage System | User Access | DBL Staff Access |
+| ----------    | - | -------- | ----------- |
+| Emails | Outlook/Exchange| Inbox owner only | ❌ |
+| Documents (with DMS) | iManage/NetDocs | If has permission in DMS | ❌ |
+| Documents (without DMS) | RC Deployment | If granted access to board by admin | ❌ |
+| Boards | RC Deployment | If granted access to board by admin | ❌ |
+| Chat | RC Deployment | If granted access to board by admin | ❌ |
+| Checklist | RC Deployment | If granted access to board by admin | ❌ |

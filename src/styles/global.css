@@ -3,3 +3,8 @@ body {
   /*font-family: Roboto, sans-serif;*/
   /*color: #1E1E1E;*/
 }
+
+table tr td{
+    padding-left: 5px;
+    padding-right: 5px;
+}
