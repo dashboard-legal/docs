@@ -47,6 +47,21 @@ The SMTP credentials are used only for certain application-initiated emails like
 | smtp_use_tls | No | Use TLS over SSL for SMTP connection |
 | imanage_oauth_key | No | iManage Oauth2.0 Key. Required for iManage integration |
 | imanage_oauth_secret | No | iManage Oauth2.0 Secret. Required for iManage integration |
+| debug_mode | No | Set to Yes for admin debuging capabilities |
+
+### Network Connectivity
+
+Please ensure the following hosts/ports are open in your firewall for external connections
+
+| Host      | Port(s) | Reason |
+| ------------- | -------- | ------------|
+| outlook.office365.com  | 443 | If using o365 integration |
+| login.microsoftonline.com  | 443 | If using o365 integration |
+| graph.microsoft.com  | 443 | If using o365 integration |
+| cloudimanage.com  | 443 | If using cloud iManage integration |
+| {{YOUR EXCHANGE SERVER HOST}} | 80, 443 | If using on-prem Exchange integration |
+| {{YOUR IMANAGE SERVER HOST}} | 80, 443 | If using on-prem Imanage integration |
+| {{YOUR SMTP SERVER HOST}} | 25, 465, 587 | SMTP Server for invite & forgot-password emails |
 
 
 ### Creating the Organization
