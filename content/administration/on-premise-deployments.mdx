@@ -83,17 +83,20 @@ When deploying the Dashboard Legal application on your own infrastructure, pleas
 Please keep in mind that the Minio container stores certain images used in the application (like user avatars), and documents if you are using the DBL in-house DMS. There will always be a need for some storage space (for the avatars), but if you are using the DBL DMS you will need to size it based on your intended document use.
 
 
-| Deployment    |   | Resource | Requirement |
-| ----------    | - | -------- | ----------- |
-| Small (1 - 20 users)     |   | vCPU   | 1                           |
-|                          |   | Memory | Web 1GB, Hasura 1GB         |
-|                          |   | Disc   | Postgres 8GB, Minio 4GB\*   |
-| Medium (20 - 50 users)   |   | vCPU   | 2                           |
-|                          |   | Memory | Web 2GB, Hasura 2GB         |
-|                          |   | Disc   | Postgres 16GB, Minio 8GB\*  |
-| Large (50+ users)        |   | vCPU   | 4                           |
-|                          |   | Memory | Web 4GB, Hasura 4GB         |
-|                          |   | Disc   | Postgres 64GB, Minio 16GB\* |
+| Deployment               |   | Resource | Requirement |
+| ----------               | - | -------- | ----------- |
+| Micro (1 - 5  users)     |   | vCPU     | 2                            |
+|                          |   | Memory   | Web 1GB, Hasura 1GB          |
+|                          |   | Disc     | Postgres 8GB, Minio 4GB\*    |
+| Small (5 - 20  users)    |   | vCPU     | 4                            |
+|                          |   | Memory   | Web 2GB, Hasura 2GB          |
+|                          |   | Disc     | Postgres 20GB, Minio 8GB\*   |
+| Medium (20 - 50 users)   |   | vCPU     | 8                            |
+|                          |   | Memory   | Web 4GB, Hasura 4GB          |
+|                          |   | Disc     | Postgres 40GB, Minio 16GB\*  |
+| Large (50+ users)        |   | vCPU     | 16                           |
+|                          |   | Memory   | Web 8GB, Hasura 8GB          |
+|                          |   | Disc     | Postgres 120GB, Minio 32GB\* |
 
 
 **\* If using the DBL DMS, add estimated size of documents stored**
