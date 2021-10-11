@@ -80,7 +80,7 @@ The default document integration is set to Dashboard Legal. For on-premise deplo
 
 When deploying the Dashboard Legal application on your own infrastructure, please allocate the following recommended infrastructure sizes, based on your organization size.
 
-## Recommended Application Scaling
+### Recommended Application Scaling
 
 Please set the `num_app_replicas` value in the rcspec file to scale the environment appropriately.
 If set to `2`, that will spin up 2 hasura containers, and 2 web containers, totalling 4 containers.
@@ -93,7 +93,7 @@ If set to `2`, that will spin up 2 hasura containers, and 2 web containers, tota
 | Large (50+ users)        |   | 8           | 1   | 16  |
 
 
-## Resource Requirements
+### Resource Requirements
 
 When allocating resources, set the resource requirements to the `Required` column for the deployment size.
 This will be the maximum that the application will require, although it's likely going to run at the `Estimated` level for most of the time.
@@ -109,7 +109,7 @@ This will be the maximum that the application will require, although it's likely
 | Large (50+ users)        |   | vCPU       | 8          | 16          | 
 |                          |   | Memory     | 16GB       | 32GB        |
 
-## Disc Space
+### Disc Space
 
 Please keep in mind that the Minio container stores certain images used in the application (like user avatars), and documents if you are using the DBL in-house DMS. There will always be a need for some storage space (for the avatars), but if you are using the DBL DMS you will need to size it based on your intended document use.
 
