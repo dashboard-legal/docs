@@ -80,24 +80,45 @@ The default document integration is set to Dashboard Legal. For on-premise deplo
 
 When deploying the Dashboard Legal application on your own infrastructure, please allocate the following recommended infrastructure sizes, based on your organization size.
 
+## Recommended Application Scaling
+
+Please set the `num_app_replicas` value in the rcspec file to scale the environment appropriately.
+If set to `2`, that will spin up 2 hasura containers, and 2 web containers, totalling 4 containers.
+
+| Deployment               |   | Recommended | Min | Max |
+| ----------               | - | ------------| ----| --- | 
+| Micro (1 - 5  users)     |   | 1           | 1   | 2   |
+| Small (5 - 20  users)    |   | 2           | 1   | 4   |
+| Medium (20 - 50 users)   |   | 4           | 1   | 8   |
+| Large (50+ users)        |   | 8           | 1   | 16  |
+
+
+## Resource Requirements
+
+When allocating resources, set the resource requirements to the `Required` column for the deployment size.
+This will be the maximum that the application will require, although it's likely going to run at the `Estimated` level for most of the time.
+
+| Deployment               |   | Resource   | Estimated  | Required    |
+| ----------               | - | --------   | ---------- | ----------- |
+| Micro (1 - 5  users)     |   | vCPU       | 1          | 2           | 
+|                          |   | Memory     | 2GB        | 4GB         |
+| Small (5 - 20  users)    |   | vCPU       | 2          | 4           | 
+|                          |   | Memory     | 4GB        | 8GB         |
+| Medium (20 - 50 users)   |   | vCPU       | 4          | 8           | 
+|                          |   | Memory     | 8GB        | 16GB        |
+| Large (50+ users)        |   | vCPU       | 8          | 16          | 
+|                          |   | Memory     | 16GB       | 32GB        |
+
+## Disc Space
+
 Please keep in mind that the Minio container stores certain images used in the application (like user avatars), and documents if you are using the DBL in-house DMS. There will always be a need for some storage space (for the avatars), but if you are using the DBL DMS you will need to size it based on your intended document use.
 
-
-| Deployment               |   | Resource | Requirement |
-| ----------               | - | -------- | ----------- |
-| Micro (1 - 5  users)     |   | vCPU     | 2                            |
-|                          |   | Memory   | Web 1GB, Hasura 1GB          |
-|                          |   | Disc     | Postgres 8GB, Minio 4GB\*    |
-| Small (5 - 20  users)    |   | vCPU     | 4                            |
-|                          |   | Memory   | Web 2GB, Hasura 2GB          |
-|                          |   | Disc     | Postgres 20GB, Minio 8GB\*   |
-| Medium (20 - 50 users)   |   | vCPU     | 8                            |
-|                          |   | Memory   | Web 4GB, Hasura 4GB          |
-|                          |   | Disc     | Postgres 40GB, Minio 16GB\*  |
-| Large (50+ users)        |   | vCPU     | 16                           |
-|                          |   | Memory   | Web 8GB, Hasura 8GB          |
-|                          |   | Disc     | Postgres 120GB, Minio 32GB\* |
-
+| Deployment               |   | Resource   | Requirement |
+| ----------               | - | --------   | ----------- |
+| Micro (1 - 5  users)     |   | Disc       | 12GB (Postgres 8GB, Minio 4GB\*)     |
+| Small (5 - 20  users)    |   | Disc       | 28GB (Postgres 20GB, Minio 8GB\*)    |
+| Medium (20 - 50 users)   |   | Disc       | 56GB (Postgres 40GB, Minio 16GB\*)   |
+| Large (50+ users)        |   | Disc       | 152GB (Postgres 120GB, Minio 32GB\*) |
 
 **\* If using the DBL DMS, add estimated size of documents stored**
 
