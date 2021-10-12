@@ -3,6 +3,10 @@ title: Security Settings
 description: Simple settings to ensure the security of your organization
 ---
 
+import {
+  ExpansionPanel,
+} from 'gatsby-theme-apollo-docs/src/components/expansion-panel';
+
 Organization Owners and Admins can manage the security settings for their organization in the [security settings page](https://app.dashboardlegal.com/x/settings/security/).
 
 > To learn mobe about the difference between Owners, Admins, and Members, please read the [User Roles](../administration/managing-users/#user-roles) guide.
@@ -19,10 +23,16 @@ When MFA is enforced for an organization, new users will be prompted the configu
 ## Single Sign On
 Dashboard Legal supports SAML2 SSO for login and registration. Please keep in mind that the SSO is SP-initiated. Additionally, if you enable SSO on your org, some authentication settings like Multi-Factor Authentication may be disabled on Dashboard Legal, as that will now be the responsibility of your Identity Provider.
 
-1. Go to your [organization security settings](https://app.dashboardlegal.com/x/settings/security/).
+<ExpansionPanel title="Prerequisite: IdP Metadata URL">
+  - Go to your Identity Management Service, and Configure a SAML2.0 IdP (Identity Provider)
+  - You will receive the SP (Service Provider) entity ID, metadata URL, and ACS url at a future step. Enter placeholder values here if they are required.
+  - Get the URL of the metadata for the IdP, you will require it in the Dashboard Legal Configuration Screen
+</ExpansionPanel>
+
+1. Go to DBL and use the account dropdown to go to *Organization Settings > Auth & Security*.
 2. Press "Configure IdP"
-3. Paste your metadata url and press "create"
-4. You will be given the SP entity ID, metadata URL, and ACS url, which you will plug into your Identity Provider dashboard
+3. Paste your IdP metadata url and press "create"
+4. You will be given the SP entity ID, metadata URL, and ACS url, which you will plug into your Identity Provider configuration
 5. Press the "Test" button to go through the SAML flow for your own account.
 6. After a successful test, Dashboard Legal will know the SAML attributes that your IdP sends. Please map the email, first name, and last name to the appropriate fields. You might need to refresh the security settings page to see them populate in the fields.
 7. You may now select "Users will log in with my SAML Identity Provider" and your organization will have SSO enabled.

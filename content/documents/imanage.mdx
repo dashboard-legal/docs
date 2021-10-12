@@ -3,15 +3,27 @@ title: iManage Integration
 description: 30 seconds to get up and running
 ---
 
+import {
+  ExpansionPanel,
+} from 'gatsby-theme-apollo-docs/src/components/expansion-panel';
 
 ## Admin setup of iManage integration
 
-1. Log into your iManage control center, and [add](https://docs.imanage.com/cc-help/10.3.3/en/Adding_an_application.html) the "Dashboard Legal" application.
-2. Enable it for all of your users, and please set "Allow Refresh Token" to "Yes"
-3. Go to your Dashboard Legal [organization integration settings](https://app.dashboardlegal.com/x/settings/integrations/).
-4. Select "iManage" and press "Save". You are good to go!
-5. If you have your own iManage work server which is hosted somewhere other than cloudimanage.com, please modify that field (do not include https:// or a trailing backslash) and press "Save". 
-6. To confirm that everything is set up properly, you can test the integration authentication by pressing the big purple button on the screen.
+
+<ExpansionPanel title="Prerequisite: Dashboard Legal Application Package">
+In order to integrate Dashboard Legal with iManage, you will need a package provided to you by the Dashboard Legal team.
+
+- If you are configuring an on-premise deployment, send your DBL representative the full url where Dashboard Legal is deployed.
+- You will be returned a file titled "manifest.yaml.zip" which includes the package necessary for the integration
+</ExpansionPanel>
+
+1. Log into your iManage control center, and [upload an application package](https://docs.imanage.com/cc-help/10.3.3/en/Adding_an_application_package.html#src-103563194_id-.AddingAppsv10.3.3-Uploadingpackage) that was provided to you.
+2. Enable the application for all of your users, and please set "Allow Refresh Token" to "Yes"
+3. Go to DBL and use the account dropdown to go to *Organization Settings > Integrations*.
+4. Under "Document Integration", select " iManage Cloud/On-Prem" and press "Save". 
+5. Configure your iManage work server. This should look like "domain.com", without any "https://" or additional path
+6. Press "Save" 
+7. To confirm that everything is set up properly, test the iManage authentication with your own account.
 
 ![configure-imanage](./img/configure-imanage.png)
 

@@ -3,6 +3,10 @@ title: Configuring Integrations
 description: Seamless integrations into your existing email provider
 ---
 
+import {
+  ExpansionPanel,
+} from 'gatsby-theme-apollo-docs/src/components/expansion-panel';
+
 Dashboard Legal supports multiple providers for it's email functionality. All integration options follow the same principles of making authenticated requests to fetch & display emails from an external server. The functionality available to users is almost identical for each email integration, but the difference is in configuration and initial authentication.
 
 ## Outlook Integration via o365
@@ -33,13 +37,20 @@ If you happen to have a personal outlook.com account via Microsoft Live (not Off
 This integration is for on-premise Exchange server 2016/2019. It requires a service account in Exchange that has access to all mailboxes that will be using Dashboard Legal. This integration option is available only with SAML SSO is also enabled on the organization.
 
 ### Configuration
+
+<ExpansionPanel title="Prerequisite: Exchange Service Account Credentials">
+  - Go to your Exchange admin console
+  - Configure a service account which has permission to impersonate the inboxes of the users that will be using Dashboard Legal
+  - Get the username & password of the service account, which you will use to configure Dashboard Legal
+</ExpansionPanel>
+
 The administrator of the organization performs the following:
-- Configure [SAML SSO](../administration/security-settings/#single-sign-on) for the organization
-- Create a service account in your Exchange Server, which has permissions to impersonate mailboxes of other users
-- Choose the Exchange Service Account option in [Integration Settings](https://app.dashboardlegal.com/x/settings/integrations/)
-- Configure the domain to the work server that hosts the Exchange server
+- Ensure [SAML SSO](../administration/security-settings/#single-sign-on) is configured for the organization. This is a requirement for using the service account exchange integration.
+- Go to DBL and use the account dropdown to go to *Organization Settings > Integrations*.
+- Select the "Exchange Server Service Account" email integration
+- Configure the work server that hosts your Exchange server. This should look like "domain.com", without any "https://" or additional path
 - Save the credentials for the service account
-- Test the integration on your own account in [email settings](https://app.dashboardlegal.com/x/account/email/)
+- Test the integration on your own account by going to "Account > Email Settings"
 
 ![exchange-service-account](./img/exchange-service-account.png)
 
