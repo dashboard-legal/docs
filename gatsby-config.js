@@ -41,6 +41,7 @@ module.exports = {
           null: [
             'index',
             'intro/getting-started'
+            // 'intro/helpful-screenshots'
           ],
           // 'Account': [
           //   'account/setting-up-your-organization',
