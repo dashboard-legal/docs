@@ -40,8 +40,8 @@ module.exports = {
         sidebarCategories: {
           null: [
             'index',
-            'intro/getting-started'
-            // 'intro/helpful-screenshots'
+            'intro/getting-started',
+            'intro/helpful-screenshots'
           ],
           // 'Account': [
           //   'account/setting-up-your-organization',
