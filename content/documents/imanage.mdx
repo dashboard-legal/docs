@@ -28,6 +28,26 @@ In order to integrate Dashboard Legal with iManage, you will need a package prov
 
 ![configure-imanage](./img/configure-imanage.png)
 
+## Integration Details
+### Requirements
+- iManage 10 or above (cloud or on-prem)
+- iManage server needs to accept https requests from "44.198.145.110"
+
+### API Endpoints
+The following API endpoints are used, prefixed with "[BASE_URL]/work/api/v2/customers/[CUSTOMER_ID]/libraries/[LIBRARY_ID]"
+- GET "/workspaces"
+- GET "/workspaces/[MATTER_ID]"
+- GET "/folders"
+- GET "/folders/[FOLDER_ID]"
+- GET "/documents"
+- GET "/documents/[DOCUMENT_ID]"
+- GET "/documents/[DOCUMENT_ID]/download"
+- GET "/documents/[DOCUMENT_ID]/versions"
+- POST "/workspaces/[MATTER_ID]/folders"
+- POST "/folders/[FOLDER_ID]/subfolders"
+- POST "/documents/[DOCUMENT_ID]/versions"
+- POST "/folders/[FOLDER_ID]/documents"
+
 ## What happens next
 
 The iManage integration will enable your organization users to log into iManage via their [account integrations settings](https://app.dashboardlegal.com/x/account/integrations/) page. The authentication is Oauth2-based, and after being redirected to iManage to enter their credentials, they will be able to view the same documents in Dashboard Legal as they would in the cloud iManage UI.
