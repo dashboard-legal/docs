@@ -1,0 +1,44 @@
+---
+title: NetDocs Integration
+description: Integrate your NetDocs account with Dashboard Legal
+---
+
+## NetDocs integration capabilities
+
+The NetDocs / Dashboard Legal integration brings your organization's documents to your favorite matter management tool. By linking a Dashboard Legal board to a NetDocs workspace, you can achieve the following:
+
+- Visualize matter documents in the same place as your team chat & checklists
+- Upload new versions of documents directly from Dashboard Legal
+- Preview & check out documents directly from Dashboard Legal
+- Search for documents by name
+- Link documents to checklist tasks
+
+## Integration Details
+
+### Security
+- The integration uses Oauth2 to authenticate users
+- Dashboard Legal does not store any documents or their contents
+- Dashboard Legal does not store any NetDocs credentials
+- Documents are accessed via API on behalf of the logged-in user
+- Ethical walls are preserved, as long as they are configured in NetDocs
+
+### Requirements
+- NetDocs server needs to accept https requests from "44.198.145.110"
+
+
+## How it works
+
+The NetDocs integration will enable your organization users to log into NetDocs via their [account integrations settings](https://app.dashboardlegal.com/x/account/integrations/) page. The authentication is Oauth2-based, and after being redirected to NetDocs to enter their credentials, they will be able to view the same documents in Dashboard Legal as they would in their NetDocs UI.
+
+If a user has not linked their NetDocs account, they will not be able to see any documents in Dashboard Legal, but a message asking them to log in. The user should only have to log in once, but if they ever want to refresh their API token, or disconnect their NetDocs account, they may do so from their account integration page.
+
+Please take a look at the [how to guide](./how-to/) for managing documents as a user or workstream admin.
+
+## Administering the NetDocs integration
+- NetDocs matters are mapped to Dashboard Legal Workstream boards. In the settings for the board, board admins will find a dropdown to select the NetDocs matter for that workstream.
+- Once linked, that matter's documents will show up in the workstream board. A NetDocs matter can only be linked to one Dashboard Legal Workstream.
+- You can only set up one DMS integration for your organization. If you go back to the [organization integration settings](https://app.dashboardlegal.com/x/settings/integrations/) and select "Dashboard Legal", the workstream documents will source from Dashboard Legal's DMS. Although it's possible to toggle between various DMS providers, we'd recommend not doing that.
+
+
+
+

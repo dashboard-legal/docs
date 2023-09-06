@@ -62,6 +62,7 @@ module.exports = {
             'documents/intro',
             'documents/how-to',
             'documents/imanage',
+            'documents/netdocs',
           ],
           // 'Chat': [
 
