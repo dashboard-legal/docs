@@ -71,10 +71,14 @@ module.exports = {
 
           // ],
           'Administration': [
-            'administration/data-residency-and-privacy',
+            // 'administration/data-residency-and-privacy',
             'administration/managing-users',
             'administration/security-settings',
             // 'administration/on-premise-deployments',
+          ],
+          'Security': [
+            'security/data-residency',
+            'security/refresh-token-security',
           ],
         },
         navConfig: {
