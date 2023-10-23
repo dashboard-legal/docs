@@ -1,0 +1,28 @@
+---
+title: Oauth Refresh Tokens
+description: Secure storage of Oauth2 refresh tokens
+---
+
+# OAuth2 Refresh Tokens Security Documentation
+
+At Dashboard Legal (DBL), the security and confidentiality of our users' data is of paramount importance. To ensure the safety of sensitive information, such as OAuth2 refresh tokens, we have implemented a comprehensive security framework that includes encryption and strict access controls. This documentation explains why OAuth2 refresh tokens are secure when stored in our encrypted database.
+
+## 1. Secure Lifecycle Management
+
+Refresh tokens are a critical component of the OAuth2 authorization process. At DBL, we prioritize security by ensuring that the refresh tokens are refreshed whenever access tokens are refreshed. This constant rotation of tokens in our system guarantees that even in the event of a security breach, the time window in which an attacker can exploit a refresh token is minimal. This approach significantly reduces the risk associated with long-lived tokens.
+
+## 2. Encrypted Database Storage
+
+Our database, which stores OAuth2 refresh tokens, is encrypted at rest. Encryption at rest ensures that even if an unauthorized party gains access to the physical storage medium, the data remains unintelligible without the appropriate decryption keys. This added layer of security safeguards against data exposure and maintains the confidentiality of the stored refresh tokens.
+
+## 3. Access Controls
+
+Access to OAuth2 refresh tokens is strictly controlled at DBL. We enforce a policy that makes these tokens inaccessible to most staff members. Only our most trusted personnel, such as system administrators and security experts, have access to the tokens. This granular access control helps to prevent unauthorized access and reduces the risk of insider threats.
+
+## 4. Private AWS VPC
+
+DBL's admin server is hosted within a private Amazon Web Services (AWS) Virtual Private Cloud (VPC). This private VPC is protected by robust access controls, firewalls, and network security configurations. This isolation ensures that unauthorized users cannot directly access the admin server, providing an additional layer of protection for our OAuth2 refresh tokens.
+
+In summary, the security of OAuth2 refresh tokens at DBL is a top priority. We implement a secure lifecycle management process that constantly refreshes tokens, employ encryption at rest to protect stored data, and enforce strict access controls to prevent unauthorized access. Additionally, our admin server resides in a private AWS VPC, further enhancing security. These measures collectively ensure that OAuth2 refresh tokens stored in our encrypted database are well-protected and maintain the highest standards of security.
+
+For further information on the security of refresh tokens, you can refer to the [OAuth2 Security Topic on Refresh token Protection](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-security-topics#refresh_token_protection).
